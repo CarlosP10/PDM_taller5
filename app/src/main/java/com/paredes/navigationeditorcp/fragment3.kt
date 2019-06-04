@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
+import kotlinx.android.synthetic.main.fragment_fragment3.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -27,5 +29,10 @@ class fragment3 : Fragment() {
         return inflater.inflate(R.layout.fragment_fragment3, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        button3.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.fragment4))
+    }
 
 }
